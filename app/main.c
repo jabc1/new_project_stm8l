@@ -30,8 +30,8 @@
 #include "uart.h"
 #include "time.h"
 #include "gpio.h"
+#include "rtc.h"
 
-unsigned int t=0;
 /** @addtogroup STM8L15x_StdPeriph_Template
   * @{
   */
@@ -54,11 +54,11 @@ void main(void)
     /*
     CLK_SYSCLKSourceSwitchCmd(ENABLE); 
     CLK_SYSCLKSourceConfig(CLK_SYSCLKSource_HSI); 
-    CLK_SYSCLKDivConfig(CLK_SYSCLKDiv_64); 
+    CLK_SYSCLKDivConfig(CLK_SYSCLKDiv_1); 
     while (CLK_GetSYSCLKSource() != CLK_SYSCLKSource_HSI) 
     {   } 
-    CLK_HSICmd(ENABLE);
-    */
+   */ 
+    Init_rtc();
     Init_time2();
     Init_gpio();
     Init_uart();
@@ -68,6 +68,7 @@ void main(void)
     while (1)
     {
         uart_test();
+        tiem2_test();
     }
 }
 #ifdef  USE_FULL_ASSERT

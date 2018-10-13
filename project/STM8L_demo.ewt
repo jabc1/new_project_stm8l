@@ -2060,6 +2060,12 @@
       <name>$PROJ_DIR$\..\user\gpio.h</name>
     </file>
     <file>
+      <name>$PROJ_DIR$\..\user\rtc.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\user\rtc.h</name>
+    </file>
+    <file>
       <name>$PROJ_DIR$\..\user\time.c</name>
     </file>
     <file>

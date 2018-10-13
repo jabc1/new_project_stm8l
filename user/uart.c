@@ -2,6 +2,7 @@
 #include "stm8l15x_gpio.h"
 #include "stm8l15x.h"  
 
+
 UART1   Uart1;
 void Init_uart()
 {
@@ -17,7 +18,7 @@ void Init_uart()
     //USART_ITConfig(USART1, USART_IT_IDLE, ENABLE); 
     //USART_ITConfig(USART1, USART_IT_PE, ENABLE);
     //USART_ITConfig(USART1, USART_IT_ERR, ENABLE);
-    //USART_ITConfig(USART1, USART_IT_TC, ENABLE);//开启接收中断
+    //USART_ITConfig(USART1, USART_IT_TC, ENABLE);
     USART_Cmd(USART1, ENABLE);
     memset(Uart1.buff,0,sizeof(Uart1.buff));
     Uart1.flag = FALSE;
@@ -59,12 +60,11 @@ void uart_test()
     if(Uart1.flag == TRUE)
     {
         USART_ITConfig(USART1, USART_IT_RXNE, ENABLE);
-        UART1_SendStr("This is a UART Demo \r\n");
+        //UART1_SendStr("This is a UART Demo \r\n");
         UART1_SendStr(Uart1.buff);
         memset(Uart1.buff,0,sizeof(Uart1.buff));
         Uart1.flag = FALSE;
         Uart1.len = 0;
-        //
     }
 }
 

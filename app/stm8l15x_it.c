@@ -28,7 +28,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm8l15x_it.h"
-extern unsigned int t;
+
 /** @addtogroup STM8L15x_StdPeriph_Template
   * @{
   */
@@ -280,7 +280,7 @@ INTERRUPT_HANDLER(ADC1_COMP_IRQHandler,18)
        it is recommended to set a breakpoint on the following instruction.
     */
 }
-
+#if 0
 /**
   * @brief TIM2 Update/Overflow/Trigger/Break /USART2 TX Interrupt routine.
   * @param  None
@@ -303,7 +303,7 @@ INTERRUPT_HANDLER(TIM2_UPD_OVF_TRG_BRK_USART2_TX_IRQHandler,19)
    }
   
 }
-
+#endif
 /**
   * @brief Timer2 Capture/Compare / USART2 RX Interrupt routine.
   * @param  None
