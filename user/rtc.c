@@ -64,6 +64,7 @@ void rtc_get_date(char *buf)
  
 	while (RTC_WaitForSynchro() != SUCCESS);
 	RTC_GetDate(RTC_Format_BIN, &RTC_DateStr);
+    
     UART1_SendByte(RTC_DateStr.RTC_Year & 0xff);
     UART1_SendByte(RTC_DateStr.RTC_Month & 0xff);
     UART1_SendByte(RTC_DateStr.RTC_Date & 0xff);
