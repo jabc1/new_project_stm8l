@@ -63,11 +63,11 @@ void main(void)
     Init_gpio();
     Init_uart();
     rim();//开启系统总中断
-    uart_test();
+    
     /* Infinite loop */
     while (1)
     {
-        ;
+        uart_test();
     }
 }
 #ifdef  USE_FULL_ASSERT

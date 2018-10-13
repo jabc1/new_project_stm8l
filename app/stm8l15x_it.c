@@ -403,17 +403,28 @@ INTERRUPT_HANDLER(USART1_TX_TIM5_UPD_OVF_TRG_BRK_IRQHandler,27)
   * @param  None
   * @retval None
   */
+#if 0
 INTERRUPT_HANDLER(USART1_RX_TIM5_CC_IRQHandler,28)
 {
     /* In order to detect unexpected events during development,
        it is recommended to set a breakpoint on the following instruction.
     */
-    unsigned char ch;
-    ch = USART_ReceiveData8(USART1);
-    USART_SendData8(USART1, ch);
-    while (USART_GetFlagStatus(USART1, USART_FLAG_TC) == RESET);
+    unsigned char ch = 0;
+    if( USART_GetITStatus(USART1,USART_IT_RXNE)!=RESET)//接收中断处理
+    {
+        USART_ClearITPendingBit (USART1,USART_IT_RXNE);//清中断标志      
+        ch = USART_ReceiveData8(USART1);
+    }
+  
+    /*
+    if(USART_GetFlagStatus(USART1,USART_FLAG_RXNE)!= RESET)
+    {
+        ch = USART_ReceiveData8(USART1);
+        USART_ClearFlag(USART1,USART_FLAG_RXNE);
+    }
+    */
 }
-
+#endif
 /**
   * @brief I2C1 / SPI2 Interrupt routine.
   * @param  None
