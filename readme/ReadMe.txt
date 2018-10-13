@@ -6,3 +6,4 @@ STM8L的中断，有两种模式，分别为Pin模式和Port模式，也就是所谓线中断和端口中断。
 举例而言，
 所有Port A/B/C/D/E的Pin1的中断都是EXTI1，
 Port B 和Port G的所有Pin的中断都是EXTIB/G
+定时器计算方法
