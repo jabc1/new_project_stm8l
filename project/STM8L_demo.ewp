@@ -259,6 +259,7 @@
           <name>CCIncludePath2</name>
           <state>$PROJ_DIR$\..\lib\inc</state>
           <state>$PROJ_DIR$\..\app</state>
+          <state>$PROJ_DIR$\..\user</state>
         </option>
         <option>
           <name>CCStdIncCheck</name>
@@ -548,7 +549,7 @@
         </option>
         <option>
           <name>IlinkDebugInfoEnable</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>IlinkKeepSymbols</name>
@@ -1702,6 +1703,24 @@
   </group>
   <group>
     <name>User</name>
+    <file>
+      <name>$PROJ_DIR$\..\user\gpio.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\user\gpio.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\user\time.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\user\time.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\user\uart.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\user\uart.h</name>
+    </file>
   </group>
 </project>
 

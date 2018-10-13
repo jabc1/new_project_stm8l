@@ -1,0 +1,6 @@
+---- USE_FULL_ASSERT Matches (4 in 2 files) ----
+
+Main.c (app):#ifdef  USE_FULL_ASSERT
+Stm8l15x_conf.h (app):/* #define USE_FULL_ASSERT    (1) */ 
+Stm8l15x_conf.h (app):#ifdef  USE_FULL_ASSERT
+Stm8l15x_conf.h (app):#endif /* USE_FULL_ASSERT */

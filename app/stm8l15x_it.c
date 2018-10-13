@@ -28,7 +28,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm8l15x_it.h"
-
+extern unsigned int t;
 /** @addtogroup STM8L15x_StdPeriph_Template
   * @{
   */
@@ -49,6 +49,7 @@
   * @retval 
   * None
 */
+
 INTERRUPT_HANDLER(NonHandledInterrupt,0)
 {
     /* In order to detect unexpected events during development,
@@ -290,6 +291,17 @@ INTERRUPT_HANDLER(TIM2_UPD_OVF_TRG_BRK_USART2_TX_IRQHandler,19)
     /* In order to detect unexpected events during development,
        it is recommended to set a breakpoint on the following instruction.
     */
+  
+   if (TIM2_GetITStatus(TIM2_IT_Update) != RESET)   //检查 TIM2 更新中断发生与否  
+   {
+        TIM2_ClearITPendingBit(TIM2_IT_Update);      //清除中断标记
+        if(t++ >= 999)
+        {
+            t = 0;
+            GPIO_ToggleBits(GPIOA,GPIO_Pin_6);
+        }
+   }
+  
 }
 
 /**
@@ -302,6 +314,7 @@ INTERRUPT_HANDLER(TIM2_CC_USART2_RX_IRQHandler,20)
     /* In order to detect unexpected events during development,
        it is recommended to set a breakpoint on the following instruction.
     */
+
 }
 
 
@@ -395,6 +408,10 @@ INTERRUPT_HANDLER(USART1_RX_TIM5_CC_IRQHandler,28)
     /* In order to detect unexpected events during development,
        it is recommended to set a breakpoint on the following instruction.
     */
+    unsigned char ch;
+    ch = USART_ReceiveData8(USART1);
+    USART_SendData8(USART1, ch);
+    while (USART_GetFlagStatus(USART1, USART_FLAG_TC) == RESET);
 }
 
 /**

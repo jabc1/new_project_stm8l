@@ -2053,6 +2053,24 @@
   </group>
   <group>
     <name>User</name>
+    <file>
+      <name>$PROJ_DIR$\..\user\gpio.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\user\gpio.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\user\time.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\user\time.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\user\uart.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\user\uart.h</name>
+    </file>
   </group>
 </project>
 

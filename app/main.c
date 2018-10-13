@@ -27,7 +27,11 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm8l15x.h"
+#include "uart.h"
+#include "time.h"
+#include "gpio.h"
 
+unsigned int t=0;
 /** @addtogroup STM8L15x_StdPeriph_Template
   * @{
   */
@@ -47,12 +51,25 @@
   */
 void main(void)
 {
-  /* Infinite loop */
-  while (1)
-  {
-  }
+    /*
+    CLK_SYSCLKSourceSwitchCmd(ENABLE); 
+    CLK_SYSCLKSourceConfig(CLK_SYSCLKSource_HSI); 
+    CLK_SYSCLKDivConfig(CLK_SYSCLKDiv_64); 
+    while (CLK_GetSYSCLKSource() != CLK_SYSCLKSource_HSI) 
+    {   } 
+    CLK_HSICmd(ENABLE);
+    */
+    Init_time2();
+    Init_gpio();
+    Init_uart();
+    rim();//开启系统总中断
+    uart_test();
+    /* Infinite loop */
+    while (1)
+    {
+        ;
+    }
 }
-
 #ifdef  USE_FULL_ASSERT
 
 /**
@@ -79,3 +96,5 @@ void assert_failed(uint8_t* file, uint32_t line)
   */
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+
+
