@@ -38,7 +38,7 @@ fCK_SPRE=fRTCCLK(PREDIV_S+1)(PREDIV_A+1)fCK_SPRE=fRTCCLK(PREDIV_S+1)(PREDIV_A+1)
 写其它值到RTC_WPR，则自动激活RTC寄存器保护功能。
 
 ****************/
-
+串口测试ok
 
 
 
