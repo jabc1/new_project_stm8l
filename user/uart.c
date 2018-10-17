@@ -11,8 +11,8 @@ void Init_uart()
     GPIO_Init(GPIOC, GPIO_Pin_2, GPIO_Mode_In_PU_No_IT);//RXD
     USART_DeInit(USART1);       //复位UART1
 
-    USART_Init(USART1, (u32)9600, USART_WordLength_8b, USART_StopBits_1,
-                USART_Parity_No, USART_Mode_Tx|USART_Mode_Rx);
+    USART_Init(USART1,9600, USART_WordLength_8b, USART_StopBits_1, \
+               USART_Parity_No, USART_Mode_Tx|USART_Mode_Rx);
     USART_ClearITPendingBit(USART1, USART_IT_RXNE);
     USART_ITConfig(USART1, USART_IT_RXNE, ENABLE);//开启接收中断
     //USART_ITConfig(USART1, USART_IT_IDLE, ENABLE); 
@@ -59,7 +59,7 @@ void uart_test()
 {
     if(Uart1.flag == TRUE)
     {
-        USART_ITConfig(USART1, USART_IT_RXNE, ENABLE);
+        //USART_ITConfig(USART1, USART_IT_RXNE, ENABLE);
         //UART1_SendStr("This is a UART Demo \r\n");
         UART1_SendStr(Uart1.buff);
         memset(Uart1.buff,0,sizeof(Uart1.buff));
@@ -82,7 +82,6 @@ INTERRUPT_HANDLER(USART1_RX_TIM5_CC_IRQHandler,28)
         if(ch == '\n')
         {
             Uart1.flag = TRUE;
-            USART_ITConfig(USART1, USART_IT_RXNE, DISABLE);
         }
     }
     /*

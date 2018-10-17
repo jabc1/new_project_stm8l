@@ -2,6 +2,7 @@
 #include "stm8l15x.h"
 #include "rtc.h"
 #include "uart.h"
+#include "gpio.h"
 
 
 unsigned char tbuff[20] ={0};
@@ -23,6 +24,7 @@ void tiem2_test()
     if(Time2.flag == TRUE)
     {
         Time2.flag = FALSE;
+        GPIO_ToggleBits(GPIOA,GPIO_Pin_6);
         rtc_get_time(tbuff);
         rtc_get_date(tbuff);
         //UART1_SendStr(tbuff);

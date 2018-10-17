@@ -202,7 +202,7 @@ defined (STM8L05X_LD_VL) || defined (STM8L05X_MD_VL) || defined (STM8AL31_L_MD)
 /******************************************************************************/
 
 /* Includes ------------------------------------------------------------------*/
-
+#include "stdio.h"
 /* Exported types and constants ----------------------------------------------*/
 
 /** @addtogroup Exported_types

@@ -2054,6 +2054,12 @@
   <group>
     <name>User</name>
     <file>
+      <name>$PROJ_DIR$\..\user\fifo.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\user\fifo.h</name>
+    </file>
+    <file>
       <name>$PROJ_DIR$\..\user\gpio.c</name>
     </file>
     <file>

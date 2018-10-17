@@ -189,7 +189,7 @@
         </option>
         <option>
           <name>CCDefines</name>
-          <state>STM8L05X_LD_VL</state>
+          <state>STM8L05X_MD_VL</state>
         </option>
         <option>
           <name>CCPreprocFile</name>
@@ -1703,6 +1703,12 @@
   </group>
   <group>
     <name>User</name>
+    <file>
+      <name>$PROJ_DIR$\..\user\fifo.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\user\fifo.h</name>
+    </file>
     <file>
       <name>$PROJ_DIR$\..\user\gpio.c</name>
     </file>
