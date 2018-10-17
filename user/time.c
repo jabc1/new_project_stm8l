@@ -19,6 +19,7 @@ void Init_time2()
 }
 void tiem2_test()
 {
+    unsigned char i;
     RTC_TimeTypeDef RTC_TimeStr;
 
     if(Time2.flag == TRUE)
@@ -26,12 +27,18 @@ void tiem2_test()
         Time2.flag = FALSE;
         GPIO_ToggleBits(GPIOA,GPIO_Pin_6);
         rtc_get_time(tbuff);
-        /*
-        FifoPush(Uart_Tx,0xa1);
-        UART1_SendByte(FifoPop(Uart_Tx));
-        */
+        for(i=0;i<8;i++)
+        FifoPush(&Uart_Tx,tbuff[i]);
+        for(i=0;i<8;i++)
+        UART1_SendByte(FifoPop(&Uart_Tx));
+        tbuff[9] = 0x20;
+        UART1_SendByte(tbuff[9]);
+        
         rtc_get_date(tbuff);
-        //UART1_SendStr(tbuff);
+        for(i=0;i<13;i++)
+        FifoPush(&Uart_Tx,tbuff[i]);
+        for(i=0;i<13;i++)
+        UART1_SendByte(FifoPop(&Uart_Tx));
     }
 
 }

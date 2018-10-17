@@ -50,13 +50,15 @@ void rtc_get_time(char *buf)
  
 	while (RTC_WaitForSynchro() != SUCCESS);
 	RTC_GetTime(RTC_Format_BIN, &RTC_TimeStr);
+    /*
     FifoPush(&Uart_Tx,RTC_TimeStr.RTC_Seconds & 0xff);
     UART1_SendByte(FifoPop(&Uart_Tx));   
+ 
     UART1_SendByte(RTC_TimeStr.RTC_Seconds & 0xff);
     UART1_SendByte(RTC_TimeStr.RTC_Minutes & 0xff);
     UART1_SendByte(RTC_TimeStr.RTC_Hours & 0xff);
-
-    sprintf(buf, "time=%02d:%02d:%02d",
+   */
+    sprintf(buf, "%02d:%02d:%02d",
 		(RTC_TimeStr.RTC_Hours & 0xff), (RTC_TimeStr.RTC_Minutes & 0xff), (RTC_TimeStr.RTC_Seconds & 0xff));
 }
  
@@ -67,11 +69,9 @@ void rtc_get_date(char *buf)
 	while (RTC_WaitForSynchro() != SUCCESS);
 	RTC_GetDate(RTC_Format_BIN, &RTC_DateStr);
     
-    UART1_SendByte(RTC_DateStr.RTC_Year & 0xff);
-    UART1_SendByte(RTC_DateStr.RTC_Month & 0xff);
-    UART1_SendByte(RTC_DateStr.RTC_Date & 0xff);
-	sprintf(buf, "%04d-%02d-%02d",
-		(RTC_DateStr.RTC_Year & 0xff) + 2000, RTC_DateStr.RTC_Month & 0xff, RTC_DateStr.RTC_Date & 0xff);
+	sprintf(buf, "%04d-%02d-%02d:%02d",
+		(RTC_DateStr.RTC_Year & 0xff) + 2000, RTC_DateStr.RTC_Month & 0xff,  \
+		 RTC_DateStr.RTC_Date & 0xff , RTC_DateStr.RTC_WeekDay & 0xff);
 }
 
 

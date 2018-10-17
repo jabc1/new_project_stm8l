@@ -66,7 +66,7 @@ void main(void)
     Init_gpio();
     Init_uart();
     FifoInit(&Uart_Tx,Uart_Tx_buff,Uart_Tx_len);
-//    FifoInit(&Uart_Rx,Uart_Rx_buff,Uart_Rx_len);
+    FifoInit(&Uart_Rx,Uart_Rx_buff,Uart_Rx_len);
     
     rim();//开启系统总中断
     /* Infinite loop */

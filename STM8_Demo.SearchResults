@@ -1,23 +1,4 @@
----- STM8AL31_L_MD Matches (23 in 5 files) ----
-Stm8l15x.h (lib\inc):/* #define STM8AL31_L_MD */   /*!< STM8AL31_L_MD: STM8AL3x Medium density devices */
-Stm8l15x.h (lib\inc):&& !defined (STM8L05X_LD_VL) && !defined (STM8L05X_MD_VL) && !defined (STM8L05X_HD_VL) && !defined (STM8AL31_L_MD)
-Stm8l15x.h (lib\inc): defined (STM8AL31_L_MD)
-Stm8l15x.h (lib\inc): #endif /* STM8L15X_MD or STM8L15X_MDP or STM8L05X_MD_VL or STM8AL31_L_MD*/ 
-Stm8l15x.h (lib\inc):defined (STM8L05X_LD_VL) || defined (STM8L05X_MD_VL) || defined (STM8AL31_L_MD)
-Stm8l15x.h (lib\inc):          or STM8AL31_L_MD */
-Stm8l15x_flash.c (lib\src):  defined (STM8L05X_LD_VL) || defined (STM8L05X_MD_VL) || defined (STM8AL31_L_MD)
-Stm8l15x_flash.c (lib\src):  defined (STM8L05X_LD_VL) || defined (STM8L05X_MD_VL) || defined (STM8AL31_L_MD)
-Stm8l15x_flash.c (lib\src):  defined (STM8L05X_LD_VL) || defined (STM8L05X_MD_VL) || defined (STM8AL31_L_MD)
-Stm8l15x_flash.h (lib\inc):#elif defined (STM8L15X_MD) || defined (STM8L15X_MDP) || defined (STM8AL31_L_MD) || defined (STM8L05X_MD_VL)
-Stm8l15x_itc.c (lib\src):#if defined (STM8L15X_MD) || defined (STM8L05X_MD_VL) || defined (STM8AL31_L_MD)
-Stm8l15x_itc.c (lib\src):#if defined (STM8L15X_MD) || defined (STM8L05X_MD_VL) || defined (STM8AL31_L_MD)
-Stm8l15x_itc.c (lib\src): defined (STM8AL31_L_MD) || defined (STM8L05X_LD_VL)
-Stm8l15x_itc.c (lib\src): defined (STM8AL31_L_MD) || defined (STM8L05X_LD_VL)
-Stm8l15x_itc.c (lib\src): defined (STM8AL31_L_MD) || defined (STM8L05X_LD_VL)
-Stm8l15x_itc.c (lib\src):#if defined (STM8L15X_MD) || defined (STM8L05X_MD_VL) || defined (STM8AL31_L_MD)
-Stm8l15x_itc.c (lib\src):#if defined (STM8L15X_MD) || defined (STM8L05X_MD_VL) || defined (STM8AL31_L_MD)
-Stm8l15x_itc.c (lib\src): defined (STM8AL31_L_MD) || defined (STM8L05X_LD_VL)
-Stm8l15x_itc.c (lib\src): defined (STM8AL31_L_MD) || defined (STM8L05X_LD_VL)
-Stm8l15x_itc.c (lib\src): defined (STM8AL31_L_MD) || defined (STM8L05X_LD_VL)
-Stm8l15x_itc.h (lib\inc):#if defined (STM8L15X_MD) || defined (STM8L05X_MD_VL) || defined (STM8AL31_L_MD)
-Stm8l15x_itc.h (lib\inc):#if defined (STM8L15X_MD) || defined (STM8L05X_MD_VL) || defined (STM8AL31_L_MD)
+---- rtc_get_time Matches (3 in 3 files) ----
+Rtc.c (user):void rtc_get_time(char *buf)
+Rtc.h (user):void rtc_get_time(char *buf);
+Time.c (user):        rtc_get_time(tbuff);
