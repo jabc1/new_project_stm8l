@@ -1,8 +1,12 @@
 #ifndef _uart_h
 #define _uart_h
+#include "fifo.h"
+
 #include "stm8l15x_usart.h"
 
 #define uart_len       255
+#define     Uart_Rx_len         512
+#define     Uart_Tx_len         512
 
 #pragma pack(push, 1)
 typedef  struct
@@ -15,7 +19,8 @@ typedef  struct
 #pragma pack(pop)
 
 extern UART1   Uart1;
-
+extern Fifo_t      Uart_Rx, Uart_Tx;
+extern uint8_t     Uart_Rx_buff[],Uart_Tx_buff[];
 
 void Init_uart(void);
 void uart_test(void);

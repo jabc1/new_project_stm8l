@@ -40,6 +40,7 @@ fCK_SPRE=fRTCCLK(PREDIV_S+1)(PREDIV_A+1)fCK_SPRE=fRTCCLK(PREDIV_S+1)(PREDIV_A+1)
 ****************/
 
 ÃÌº”fifoª∫¥Êª˙÷∆
+≤‚ ‘fifo ok
 
 
 

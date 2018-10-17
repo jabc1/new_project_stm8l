@@ -3,6 +3,10 @@
 #include "stm8l15x.h"  
 
 
+Fifo_t      Uart_Rx;
+Fifo_t      Uart_Tx;
+uint8_t     Uart_Rx_buff[Uart_Rx_len],Uart_Tx_buff[Uart_Tx_len];
+
 UART1   Uart1;
 void Init_uart()
 {

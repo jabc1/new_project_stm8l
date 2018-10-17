@@ -26,6 +26,10 @@ void tiem2_test()
         Time2.flag = FALSE;
         GPIO_ToggleBits(GPIOA,GPIO_Pin_6);
         rtc_get_time(tbuff);
+        /*
+        FifoPush(Uart_Tx,0xa1);
+        UART1_SendByte(FifoPop(Uart_Tx));
+        */
         rtc_get_date(tbuff);
         //UART1_SendStr(tbuff);
     }

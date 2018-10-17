@@ -42,3 +42,9 @@ bool IsFifoFull( Fifo_t *fifo )
 {
     return (bool)( FifoNext( fifo, fifo->End ) == fifo->Begin );
 }
+
+
+
+
+
+
