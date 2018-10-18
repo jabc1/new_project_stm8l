@@ -1729,6 +1729,12 @@
       <name>$PROJ_DIR$\..\user\gpio.h</name>
     </file>
     <file>
+      <name>$PROJ_DIR$\..\user\lowpower.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\user\lowpower.h</name>
+    </file>
+    <file>
       <name>$PROJ_DIR$\..\user\queue_jk.c</name>
     </file>
     <file>

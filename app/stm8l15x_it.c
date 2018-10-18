@@ -104,6 +104,7 @@ INTERRUPT_HANDLER(DMA1_CHANNEL2_3_IRQHandler,3)
        it is recommended to set a breakpoint on the following instruction.
     */
 }
+#if 0
 /**
   * @brief RTC / CSS_LSE Interrupt routine.
   * @param  None
@@ -115,6 +116,7 @@ INTERRUPT_HANDLER(RTC_CSSLSE_IRQHandler,4)
        it is recommended to set a breakpoint on the following instruction.
     */
 }
+#endif
 /**
   * @brief External IT PORTE/F and PVD Interrupt routine.
   * @param  None

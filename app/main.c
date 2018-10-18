@@ -74,18 +74,20 @@ void main(void)
     Init_uart();
     FifoInit(&Uart_Tx,Uart_Tx_buff,Uart_Tx_len);
     //FifoInit(&Uart_Rx,Uart_Rx_buff,Uart_Rx_len);
-    Queue_Init(&Uart_Rx12,Uart_Rx_buff,Uart_Rx_len,20);
-    IWDG_Init();
+    Queue_Init(&Uart_Rx12,Uart_Rx_buff,Uart_Rx_len,8);
+    //IWDG_Init();
+    Inti_lowpower();
     rim();//开启系统总中断
-    UART1_SendByte(0x61);
-    delay();
-    GPIO_Init(GPIOA,GPIO_Pin_6, GPIO_Mode_Out_PP_High_Fast);
+    //UART1_SendByte(0x61);
+    //delay();
+    //GPIO_Init(GPIOA,GPIO_Pin_6, GPIO_Mode_Out_PP_High_Fast);
     /* Infinite loop */
     while (1)
     {
-        IWDG_ReloadCounter();
+        //IWDG_ReloadCounter();
         uart_test();
         tiem2_test();
+        halt();
     }
 }
 #ifdef  USE_FULL_ASSERT

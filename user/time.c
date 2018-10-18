@@ -3,7 +3,7 @@
 #include "rtc.h"
 #include "uart.h"
 #include "gpio.h"
-
+#include "queue_jk.h"
 
 unsigned char tbuff[20] ={0};
 TIME2   Time2 = {0,0,0,0,0};
@@ -25,8 +25,10 @@ void tiem2_test()
     if(Time2.flag == TRUE)
     {
         Time2.flag = FALSE;
-        GPIO_ToggleBits(GPIOA,GPIO_Pin_6);
+        //GPIO_ToggleBits(GPIOA,GPIO_Pin_6);
         rtc_get_time(tbuff);
+        Queue_Put(&Uart_Rx12,tbuff);
+        Queue_Get(&Uart_Rx12,tbuff);
         for(i=0;i<8;i++)
         FifoPush(&Uart_Tx,tbuff[i]);
         for(i=0;i<8;i++)
