@@ -43,6 +43,7 @@ fCK_SPRE=fRTCCLK(PREDIV_S+1)(PREDIV_A+1)fCK_SPRE=fRTCCLK(PREDIV_S+1)(PREDIV_A+1)
 测试fifo ok
 添加看门狗
 添加低功耗halt模式通过RTC定时唤醒测试ok
+添加文件注释
 
 
 

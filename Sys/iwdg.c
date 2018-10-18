@@ -1,4 +1,12 @@
 #include "iwdg.h"
+/*!
+ * @file iwdg.c
+ * @brief 实现看门狗功能
+ * @author jason
+ * @date 2018-10-18
+ * @version ver1.0
+ */
+
 void IWDG_Init(void)
 {
     CLK_LSICmd(ENABLE);

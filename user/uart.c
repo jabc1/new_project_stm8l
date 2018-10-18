@@ -1,6 +1,13 @@
 #include "uart.h"
 #include "stm8l15x_gpio.h"
 #include "stm8l15x.h"  
+/*!
+ * @file uart.c
+ * @brief 主要实现muc外设串口相关功能
+ * @author jason
+ * @date 2018-10-18
+ * @version ver1.0
+ */
 
 
 Fifo_t      Uart_Rx;

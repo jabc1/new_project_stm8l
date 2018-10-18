@@ -1,4 +1,11 @@
 #include "lowpower.h"
+/*!
+ * @file lowpower.c
+ * @brief 低功耗功能实现
+ * @author jason
+ * @date 2018-10-18
+ * @version ver1.0
+ */
 
 void Inti_lowpower()
 {
@@ -35,7 +42,6 @@ INTERRUPT_HANDLER(RTC_CSSLSE_IRQHandler,4)
        it is recommended to set a breakpoint on the following instruction.
     */
     RTC_WakeUpCmd(DISABLE);
-    Delay(0x002F);
     GPIO_ToggleBits(GPIOA,GPIO_Pin_6);
     RTC_ClearITPendingBit(RTC_IT_WUT);  
     RTC_WakeUpCmd(ENABLE);

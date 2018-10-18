@@ -4,6 +4,13 @@
 #include "uart.h"
 #include "gpio.h"
 #include "queue_jk.h"
+/*!
+ * @file time.c
+ * @brief 实现时间相关功能
+ * @author jason
+ * @date 2018-10-18
+ * @version ver1.0
+ */
 
 unsigned char tbuff[20] ={0};
 TIME2   Time2 = {0,0,0,0,0};

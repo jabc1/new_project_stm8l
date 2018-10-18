@@ -1,4 +1,11 @@
 #include "fifo.h"
+/*!
+ * @file fifo.c
+ * @brief 实现缓存机制
+ * @author jason
+ * @date 2018-10-18
+ * @version ver1.0
+ */
 
 static uint16_t FifoNext( Fifo_t *fifo, uint16_t index )
 {

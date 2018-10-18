@@ -1,5 +1,12 @@
 #ifndef __BASE_H__
 #define __BASE_H__
+/*!
+ * @file base.h
+ * @brief 数据类型定义
+ * @author jason
+ * @date 2018-10-18
+ * @version ver1.0
+ */
 
 
 #include "stm8l15x.h"
@@ -52,3 +59,16 @@ typedef __I uint8_t  vuc8;   /*!< Read Only */
 #define S32_MIN    INT32_MIN
 
 #endif
+
+
+
+
+
+
+
+
+
+
+
+
+

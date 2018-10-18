@@ -1,6 +1,13 @@
 #include "rtc.h"
 #include "uart.h"
 #include "fifo.h"
+/*!
+ * @file rtc.c
+ * @brief 芯片rtc功能实现
+ * @author jason
+ * @date 2018-10-18
+ * @version ver1.0
+ */
 
 void Init_rtc(void)
 {
