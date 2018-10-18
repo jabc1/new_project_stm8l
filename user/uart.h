@@ -24,6 +24,7 @@ extern uint8_t     Uart_Rx_buff[],Uart_Tx_buff[];
 
 void Init_uart(void);
 void uart_test(void);
+void UART1_SendByte(u8 data);
 
 
 

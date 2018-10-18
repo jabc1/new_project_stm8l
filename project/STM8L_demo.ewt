@@ -2052,7 +2052,19 @@
     </file>
   </group>
   <group>
+    <name>Sys</name>
+    <file>
+      <name>$PROJ_DIR$\..\Sys\iwdg.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Sys\iwdg.h</name>
+    </file>
+  </group>
+  <group>
     <name>User</name>
+    <file>
+      <name>$PROJ_DIR$\..\user\base.h</name>
+    </file>
     <file>
       <name>$PROJ_DIR$\..\user\fifo.c</name>
     </file>
@@ -2064,6 +2076,12 @@
     </file>
     <file>
       <name>$PROJ_DIR$\..\user\gpio.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\user\queue_jk.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\user\queue_jk.h</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\user\rtc.c</name>

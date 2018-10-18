@@ -31,6 +31,7 @@ void tiem2_test()
         FifoPush(&Uart_Tx,tbuff[i]);
         for(i=0;i<8;i++)
         UART1_SendByte(FifoPop(&Uart_Tx));
+        
         tbuff[9] = 0x20;
         UART1_SendByte(tbuff[9]);
         

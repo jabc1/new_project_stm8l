@@ -1,4 +1,2 @@
----- rtc_get_time Matches (3 in 3 files) ----
-Rtc.c (user):void rtc_get_time(char *buf)
-Rtc.h (user):void rtc_get_time(char *buf);
-Time.c (user):        rtc_get_time(tbuff);
+---- RELOAD_VALUE Matches (1 in 1 files) ----
+Iwdg.c (sys):    IWDG_SetReload((uint8_t)254);//RELOAD_VALUE=254  1.724s

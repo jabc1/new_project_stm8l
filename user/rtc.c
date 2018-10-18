@@ -50,14 +50,7 @@ void rtc_get_time(char *buf)
  
 	while (RTC_WaitForSynchro() != SUCCESS);
 	RTC_GetTime(RTC_Format_BIN, &RTC_TimeStr);
-    /*
-    FifoPush(&Uart_Tx,RTC_TimeStr.RTC_Seconds & 0xff);
-    UART1_SendByte(FifoPop(&Uart_Tx));   
- 
-    UART1_SendByte(RTC_TimeStr.RTC_Seconds & 0xff);
-    UART1_SendByte(RTC_TimeStr.RTC_Minutes & 0xff);
-    UART1_SendByte(RTC_TimeStr.RTC_Hours & 0xff);
-   */
+
     sprintf(buf, "%02d:%02d:%02d",
 		(RTC_TimeStr.RTC_Hours & 0xff), (RTC_TimeStr.RTC_Minutes & 0xff), (RTC_TimeStr.RTC_Seconds & 0xff));
 }
