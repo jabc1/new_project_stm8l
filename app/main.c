@@ -85,8 +85,8 @@ void main(void)
     while (1)
     {
         //IWDG_ReloadCounter();
-        uart_test();
-        tiem2_test();
+        //uart_test();
+        //tiem2_test();
         halt();
     }
 }

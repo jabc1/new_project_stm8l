@@ -29,9 +29,9 @@ void tiem2_test()
     unsigned char i;
     RTC_TimeTypeDef RTC_TimeStr;
 
-    if(Time2.flag == TRUE)
+    //if(Time2.flag == TRUE)
     {
-        Time2.flag = FALSE;
+        //Time2.flag = FALSE;
         //GPIO_ToggleBits(GPIOA,GPIO_Pin_6);
         rtc_get_time(tbuff);
         Queue_Put(&Uart_Rx12,tbuff);

@@ -1,2 +1,8 @@
----- RELOAD_VALUE Matches (1 in 1 files) ----
-Iwdg.c (sys):    IWDG_SetReload((uint8_t)254);//RELOAD_VALUE=254  1.724s
+---- itemMax Matches (7 in 2 files) ----
+Queue_jk.c (user):    q->itemMax = buffer_size/item_size;
+Queue_jk.c (user):    if(q->itemCount == q->itemMax)
+Queue_jk.c (user):            q->front = (q->front + 1) % q->itemMax;
+Queue_jk.c (user):    q->rear = (q->rear + 1) % q->itemMax;
+Queue_jk.c (user):    q->front = (q->front + 1) % q->itemMax;
+Queue_jk.c (user):    return q->itemMax - q->itemCount;
+Queue_jk.h (user):    u32 itemMax;

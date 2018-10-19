@@ -25,3 +25,4 @@ delJLinkLog.txt /s
 ::del *.sct/s
 ::del *.map/s
 exit
+

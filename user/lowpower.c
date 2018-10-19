@@ -1,4 +1,6 @@
 #include "lowpower.h"
+#include "time.h"
+
 /*!
  * @file lowpower.c
  * @brief 低功耗功能实现
@@ -43,6 +45,7 @@ INTERRUPT_HANDLER(RTC_CSSLSE_IRQHandler,4)
     */
     RTC_WakeUpCmd(DISABLE);
     GPIO_ToggleBits(GPIOA,GPIO_Pin_6);
+    tiem2_test();
     RTC_ClearITPendingBit(RTC_IT_WUT);  
     RTC_WakeUpCmd(ENABLE);
     
