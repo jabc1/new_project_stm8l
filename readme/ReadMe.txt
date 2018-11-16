@@ -45,9 +45,14 @@ fCK_SPRE=fRTCCLK(PREDIV_S+1)(PREDIV_A+1)fCK_SPRE=fRTCCLK(PREDIV_S+1)(PREDIV_A+1)
 添加低功耗halt模式通过RTC定时唤醒测试ok
 添加文件注释
 工程运行一段时间会重启，不知道什么原因
+添加boot段代码
 
 
-
+数据段	用啦存放初始化变量为零的变量
+bss段   用来存放初始化不为零的变量
+程序段	用来存放程序代码
+堆		分配内存空间
+栈		程序运行顺序
 
 
 

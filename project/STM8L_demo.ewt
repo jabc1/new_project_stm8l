@@ -1953,6 +1953,33 @@
     </file>
   </group>
   <group>
+    <name>Boot</name>
+    <file>
+      <name>$PROJ_DIR$\..\boot\boot_Interface.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\boot\boot_Interface.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\boot\flash.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\boot\flash.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\boot\uart2.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\boot\uart2.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\boot\xmodem.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\boot\xmodem.h</name>
+    </file>
+  </group>
+  <group>
     <name>Lib</name>
     <file>
       <name>$PROJ_DIR$\..\lib\src\stm8l15x_adc.c</name>

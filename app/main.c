@@ -87,7 +87,7 @@ void main(void)
         //IWDG_ReloadCounter();
         //uart_test();
         //tiem2_test();
-        halt();
+        //halt();
     }
 }
 #ifdef  USE_FULL_ASSERT
